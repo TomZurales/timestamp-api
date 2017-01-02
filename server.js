@@ -4,7 +4,7 @@ var app = express();
 var curTimestamp;
 var curDateTime
 app.get('/:time', function (req, res){
-    res.setHeader('Content-Type', 'application/json');
+    res.writeHead(200, {'Content-Type': 'application/json'});
     var curDate = new Date();
     if(isValidDate(req.params.time) || isValidUnix(req.params.time)){
         curTimestamp = Math.floor(Date.now() / 1000)
@@ -24,7 +24,7 @@ function isValidDate(time){
 function isValidUnix(time){
     if(time < 0) return false;
     var inputDate = new Date().setTime(time * 1000);
-    return inputDate != 'Invalid Date' && time > 0;
+    return inputDate != 'Invalid Date';
 }
 
 function createNaturalDate(date){
