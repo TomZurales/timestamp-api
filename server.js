@@ -12,7 +12,7 @@ app.set('port', (process.env.PORT || 5000));
 app.set('view engine', 'pug');
 
 app.get('/', function(req, res){
-  res.render('index', {'title': 'It Works!'})
+  res.render('index')
 });
 
 app.get('/:time', function (req, res){
