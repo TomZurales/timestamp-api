@@ -24,7 +24,7 @@ app.get('/:time', function (req, res){
   res.end(JSON.stringify({ "unix": null, "natural": null }));
 });
 
-app.listen(8080);
+app.listen(18320);
 
 function isValidDate(time){
   if(time >= 0){
