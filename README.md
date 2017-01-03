@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
   <head>
     <title>Timestamp Microservice</title>
@@ -18,6 +17,6 @@
       </ul>
       </blockquote>
         <h2>Example Usage:</h2>
-          <h4>Request:</h4><code>https://morning-savannah-26026.herokuapp.com/December%2015,%202016<br></code>
+          <h4>Request:</h4><code>https://morning-savannah-26026.herokuapp.com/December%2015,%202016<br><br></code>
           <code>https://morning-savannah-26026.herokuapp.com/1450137600<br></code>
           <h4>Response:</h4><code>{ "unix": 1483424738, "natural": "January 3, 2017" }</code></p></div></body></html>
