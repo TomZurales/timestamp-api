@@ -1,8 +1,18 @@
 var express = require('express');
+var pug =  require('pug');
 var app = express();
 
 var curTimestamp;
 var curDateTime
+
+app.set('views', path.join(__dirname, 'views'));
+
+app.set('view engine', 'pug');
+
+app.get('/', function(req, res){
+  res.render('index', {'title': 'It Works!'})
+});
+
 app.get('/:time', function (req, res){
   res.writeHead(200, {'Content-Type': 'application/json'});
   var curDate = new Date();
