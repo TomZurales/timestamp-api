@@ -7,6 +7,7 @@ var curTimestamp;
 var curDateTime
 
 app.set('views', path.join(__dirname, 'views'));
+app.set('port', (process.env.PORT || 5000));
 
 app.set('view engine', 'pug');
 
@@ -25,7 +26,9 @@ app.get('/:time', function (req, res){
   res.end(JSON.stringify({ "unix": null, "natural": null }));
 });
 
-app.listen(18320);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
 
 function isValidDate(time){
   if(time >= 0){
